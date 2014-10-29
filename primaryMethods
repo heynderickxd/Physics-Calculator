@@ -1,3 +1,6 @@
 public class primaryMethods {
 System.out.println("This is hardly smelly");
+
+
+System.out.print("Yeah");
 }
