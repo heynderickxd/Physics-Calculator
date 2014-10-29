@@ -1,7 +1,0 @@
-public class primaryMethods {
-System.out.println("This is smelly");
-
-
-System.out.print("Yeah");
-
-}
