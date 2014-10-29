@@ -1,10 +1,7 @@
 public class primaryMethods {
-<<<<<<< HEAD
-System.out.println("This is hardly smelly");
+System.out.println("This is smelly");
 
 
 System.out.print("Yeah");
-=======
-System.out.println("This is smelly");
->>>>>>> FETCH_HEAD
+
 }
