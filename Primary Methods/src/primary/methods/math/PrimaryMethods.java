@@ -2,6 +2,7 @@ package primary.methods.math;
 /**
  *
  * @author heynderickxd
+ * @author vannc
  * I used doubles all the way through. Must leave note reminding about sig figs 
  */
 public class PrimaryMethods {
