@@ -1,4 +1,4 @@
-package primary.methods;
+package primary.classes;
 /**
  *
  * @author heynderickxd
