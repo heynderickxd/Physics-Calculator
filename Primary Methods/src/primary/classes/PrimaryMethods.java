@@ -169,4 +169,82 @@ public class PrimaryMethods {
        acceleration = netForce / mass;
        return acceleration;
    }
+   //Methods to solve Knetic Energy equations ke=1/2mv^2 or ke=1/2Iw^2
+   //Solve for ke
+   public double kel(double mass, double v){
+      double ke = 0.0;
+      ke = 0.5*mass*v*v;
+        return ke;
+   }
+   //solve for m or I
+   public double kelmass(double energy, double v){
+       double mass = 0.0;
+       mass = 2*energy/v/v;
+       return mass;
+    }
+   //solve for v or w
+   public double kelv(double energy, double mass){
+       double v = 0.0;
+       v = Math.sqrt(2*energy/mass);
+       return v;
+   }
+   //Mehtods to solve equations of I
+   //point mass
+   public double MoI(double in[][], int numMasses){
+       double moI = 0.0;
+       for(int i = 0; i<in.length; i++){
+       moI=moI+(in[i][0]*in[i][1]);
+       }
+       return moI;
+   }
+   //Hoop around central axis
+   public double MoIHc(double mass, double radius){
+   double moI=mass*radius*radius;
+   return moI;
+   }
+   //Ring around central axis
+   public double MoIRi(double mass, double radius1, double radius2){
+   double moI=.5*mass*(radius1*radius1+radius2*radius2);
+   return moI;
+   }
+   //Cylinder around central axis
+   public double MoICc(double mass, double radius){
+   double moI=.5*mass*radius*radius;
+   return moI;
+   }
+   //Cylinder around central diameter
+   public double MoICd(double mass, double radius, double length){
+   double moI=.25*mass*radius*radius+1/12*mass*length*length;
+   return moI;
+   }
+   //Rod around central axis
+   public double MoIR(double mass, double length){
+   double moI=1/12*mass*length*length;
+   return moI;
+   }
+   //Solid Sphere around central axis
+   public double MoIS(double mass, double radius){
+   double moI=2/5*mass*radius*radius;
+   return moI;
+   }
+   //Hollow Sphere around central axis
+   public double MoISh(double mass, double radius){
+   double moI=2/3*mass*radius*radius;
+   return moI;
+   }
+   //Hoop around diameter
+   public double MoIHd(double mass, double radius){
+   double moI=.5*mass*radius*radius;
+   return moI;
+   }
+   //Slab around central axis
+   public double MoISl(double mass, double a, double b){
+   double moI=mass/12*(a*a*b*b);
+   return moI;
+   }
+   //Method to find additional I through the parallel axis theorum
+   public double PAxis(double mass, double h){
+   double mh2 = mass*h*h;
+   return mh2;
+   }
 }
