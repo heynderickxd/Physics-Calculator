@@ -91,6 +91,25 @@ public class PrimaryMethods {
                        / (2 * displacement);
        return acceleration;
    }
+   //methods for fourth kinematic equation (x=v_ft-1/2at^2)
+   //solving for displacement
+   public double kinematics11 (double vf, double a, double t){
+       double x = 0.0;
+       x = (vf * t) - (0.5 * a * t * t);
+       return x;
+   }
+   //solving for v_f
+   public double kinematics12 (double x, double a, double t){
+       double vf = 0.0;
+       vf = (x + (0.5 * a * t * t)) / t;
+       return vf;
+   }
+   //solving for a
+   public double kinematics13 (double x, double t, double vf){
+       double a = 0.0;
+       a = ((x - (vf * t)) * (-2.0)) / (t * t);
+       return a;
+   }
   /**
    * Method set to convert linear kinematics values into angular values
    */
