@@ -5,6 +5,7 @@ package primary.methods.math;
  * @author vannc
  * I used doubles all the way through. Must leave note reminding about sig figs 
  */
+import java.util.Scanner;
 public class PrimaryMethods {
    /**set of methods for dealing with kinematic equations
     * Note that the methods can be used for both linear and angular kinematics
@@ -248,4 +249,18 @@ public class PrimaryMethods {
    double mh2 = mass*h*h;
    return mh2;
    }
-}
+    public boolean InTest(String[] args) { 
+    
+    Scanner sc = new Scanner(System.in);
+    String s = sc.next();
+    try{
+    Double.parseDouble(s);
+    
+    }catch(NumberFormatException e){
+    return false;
+    }
+    return true;
+    }
+    
+  }
+
