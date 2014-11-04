@@ -200,56 +200,56 @@ public class PrimaryMethods {
        return moI;
    }
    //Hoop around central axis
-   public double MoIHc(double mass, double radius){
+   public double moIHc(double mass, double radius){
    double moI=mass*radius*radius;
    return moI;
    }
    //Ring around central axis
-   public double MoIRi(double mass, double radius1, double radius2){
+   public double moIRi(double mass, double radius1, double radius2){
    double moI=.5*mass*(radius1*radius1+radius2*radius2);
    return moI;
    }
    //Cylinder around central axis
-   public double MoICc(double mass, double radius){
+   public double moICc(double mass, double radius){
    double moI=.5*mass*radius*radius;
    return moI;
    }
    //Cylinder around central diameter
-   public double MoICd(double mass, double radius, double length){
+   public double moICd(double mass, double radius, double length){
    double moI=.25*mass*radius*radius+1/12*mass*length*length;
    return moI;
    }
    //Rod around central axis
-   public double MoIR(double mass, double length){
+   public double moIR(double mass, double length){
    double moI=1/12*mass*length*length;
    return moI;
    }
    //Solid Sphere around central axis
-   public double MoIS(double mass, double radius){
+   public double moIS(double mass, double radius){
    double moI=2/5*mass*radius*radius;
    return moI;
    }
    //Hollow Sphere around central axis
-   public double MoISh(double mass, double radius){
+   public double moISh(double mass, double radius){
    double moI=2/3*mass*radius*radius;
    return moI;
    }
    //Hoop around diameter
-   public double MoIHd(double mass, double radius){
+   public double moIHd(double mass, double radius){
    double moI=.5*mass*radius*radius;
    return moI;
    }
    //Slab around central axis
-   public double MoISl(double mass, double a, double b){
+   public double moISl(double mass, double a, double b){
    double moI=mass/12*(a*a*b*b);
    return moI;
    }
    //Method to find additional I through the parallel axis theorum
-   public double PAxis(double mass, double h){
+   public double pAxis(double mass, double h){
    double mh2 = mass*h*h;
    return mh2;
    }
-    public boolean InTest(String[] args) { 
+    public boolean inTest(String[] args) { 
     
     Scanner sc = new Scanner(System.in);
     String s = sc.next();
