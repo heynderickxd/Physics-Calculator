@@ -134,7 +134,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jLabel5.setText("Kinetic Energy");
 
-        jLabel6.setText("Moment of Inertial");
+        jLabel6.setText("Moment of Inertia");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -162,7 +162,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jTextField2.setText("jTextField1");
+        jTextField2.setText("        ");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -171,7 +171,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "X", "a", "Vf", "Vo", "t" }));
 
-        jTextField3.setText("jTextField1");
+        jTextField3.setText("        ");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
@@ -185,7 +185,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jTextField4.setText("jTextField1");
+        jTextField4.setText("        ");
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -252,7 +252,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "R" }));
 
         jTextField10.setText("jTextField1");
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
@@ -261,7 +261,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "R" }));
 
         jTextField11.setText("jTextField1");
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
@@ -270,7 +270,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "R" }));
         jComboBox15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox15ActionPerformed(evt);
@@ -298,7 +298,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "V", "I", "ω" }));
 
         jTextField14.setText("jTextField1");
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
@@ -314,7 +314,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "V", "I", "ω" }));
         jComboBox19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox19ActionPerformed(evt);
@@ -365,7 +365,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "θ", "a", "x", "ω", "α", "V", "r" }));
 
         jButton21.setText("Clear");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
@@ -388,7 +388,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox27.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox27.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "V", "I", "ω" }));
         jComboBox27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox27ActionPerformed(evt);
@@ -402,7 +402,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox28.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox28.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "V", "I", "ω" }));
 
         jButton24.setText("Clear");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
@@ -425,7 +425,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox29.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox29.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "R" }));
         jComboBox29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox29ActionPerformed(evt);
@@ -439,7 +439,7 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jComboBox30.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox30.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "R" }));
 
         jButton27.setText("Clear");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
@@ -604,7 +604,7 @@ public class calculatorFront extends javax.swing.JFrame {
                                         .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE))
                                 .addGap(27, 27, 27))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -989,6 +989,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         jTextField8.setText("");
+        jTextField9.setText("");
         jTextField18.setText("");
         jTextArea1.setText("You have cleared the third column");
     }//GEN-LAST:event_jButton21ActionPerformed
@@ -1105,6 +1106,7 @@ public class calculatorFront extends javax.swing.JFrame {
         jTextField15.setText("");
         jTextField19.setText("");
         jTextField8.setText("");
+        jTextField9.setText("");
         jTextField18.setText("");
         jTextField5.setText("");
         jTextField6.setText("");
