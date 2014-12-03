@@ -1,20 +1,26 @@
+/*
+ *Swag Licence
+ */
 package primary.gui.main;
+
 /**
+ *
  * @author heynderickxd, cvann
  */
 public class calculatorFront extends javax.swing.JFrame {
 //Reference variables to assign within handling code as we get inputs
-    Object k1, k2, k3, k4, k5;
-    Object nsl1, nsl2, nsl3;
-    Object c1, c2, c3;
-    Object ke1, ke2, ke3;
-    Object moi1, moi2, moi3, moi4;
+    double k1, k2, k3, k4, k5;
+    double nsl1, nsl2, nsl3;
+    double c1, c2, c3;
+    double ke1, ke2, ke3;
+    double moi1, moi2, moi3, moi4;
     /**
      * Creates new form calculatorFront
      */
     public calculatorFront() {
         initComponents();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -696,10 +702,10 @@ public class calculatorFront extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5))))
+                            .addComponent(jLabel3))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -762,11 +768,10 @@ public class calculatorFront extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton23, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButton26)
-                                    .addComponent(jButton29)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton23)
+                                .addComponent(jButton26)
+                                .addComponent(jButton29))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton20)))
@@ -855,16 +860,12 @@ public class calculatorFront extends javax.swing.JFrame {
     }//GEN-LAST:event_kComboBox4ActionPerformed
 
     private void solveKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solveKActionPerformed
-        //You can refactor this with one of the object initialized earlier, may help readability and organization ~ Doug 
         Object a =kComboBox1.getSelectedItem();
-<<<<<<< HEAD
         Object b =kComboBox2.getSelectedItem();
         Object c =kComboBox3.getSelectedItem();
         Object d =kComboBox4.getSelectedItem();
         
         
-=======
->>>>>>> FETCH_HEAD
     }//GEN-LAST:event_solveKActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -884,7 +885,8 @@ public class calculatorFront extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void nComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nComboBox1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: TEST
+        
     }//GEN-LAST:event_nComboBox1ActionPerformed
 
     private void kComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kComboBox1ActionPerformed
