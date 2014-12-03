@@ -861,6 +861,9 @@ public class calculatorFront extends javax.swing.JFrame {
 
     private void solveKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solveKActionPerformed
         Object a =kComboBox1.getSelectedItem();
+        Object b =kComboBox2.getSelectedItem();
+        Object c =kComboBox3.getSelectedItem();
+        Object d =kComboBox4.getSelectedItem();
         
         
     }//GEN-LAST:event_solveKActionPerformed
