@@ -1,10 +1,5 @@
-/*
- *Swag Licence
- */
 package primary.gui.main;
-
 /**
- *
  * @author heynderickxd, cvann
  */
 public class calculatorFront extends javax.swing.JFrame {
@@ -858,7 +853,27 @@ public class calculatorFront extends javax.swing.JFrame {
         String b =(kComboBox2.getSelectedItem()).toString();
         String c =(kComboBox3.getSelectedItem()).toString();
         String d =(kComboBox4.getSelectedItem()).toString();
-        
+        //Strings for comparison "X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" 
+        //Suggest Clearer variable naming scheme
+        String e = "X";
+        String f = "a";
+        String g = "Vf";
+        String h = "Vo";
+        String i = "t";
+        String j = "α";
+        String k = "θ";
+        String l = "ωo";
+        String m = "ωf";
+        String n = ""; //does a blank combo box return an empty string? 
+        //experimenting with how to evaulate the combo box values
+        if(
+          ((a.equals(e) || b.equals(a) || c.equals(a) || d.equals(a)) &&
+           (a.equals(f) || b.equals(f) || c.equals(f) || d.equals(f)) &&
+           (a.equals(g) || b.equals(g) || c.equals(g) || d.equals(g)) && 
+           (a.equals(h) || b.equals(h) || c.equals(h) || d.equals(h)))      
+                ){
+            //pull in requesite variables and solve for Vo with correct method 
+        }
         
     }//GEN-LAST:event_solveKActionPerformed
 
