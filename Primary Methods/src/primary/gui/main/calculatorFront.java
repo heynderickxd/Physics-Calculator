@@ -3,19 +3,18 @@ package primary.gui.main;
  * @author heynderickxd, cvann
  */
 public class calculatorFront extends javax.swing.JFrame {
-//Reference variables to assign within handling code as we get inputs
-    double k1, k2, k3, k4, k5;
-    double nsl1, nsl2, nsl3;
-    double c1, c2, c3;
-    double ke1, ke2, ke3;
-    double moi1, moi2, moi3, moi4;
+//Reference variables to assign within handling code as we get inputs- declared 
+//outside of main so that they may be accessed from any point in the handling code
+    String a = "";
+    String b = "";
+    String c = "";
+    String d = "";
     /**
      * Creates new form calculatorFront
      */
     public calculatorFront() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -849,10 +848,10 @@ public class calculatorFront extends javax.swing.JFrame {
     }//GEN-LAST:event_kComboBox4ActionPerformed
 
     private void solveKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solveKActionPerformed
-        String a =(kComboBox1.getSelectedItem()).toString();
-        String b =(kComboBox2.getSelectedItem()).toString();
-        String c =(kComboBox3.getSelectedItem()).toString();
-        String d =(kComboBox4.getSelectedItem()).toString();
+        a = (kComboBox1.getSelectedItem()).toString();
+        b = (kComboBox2.getSelectedItem()).toString();
+        c = (kComboBox3.getSelectedItem()).toString();
+        d = (kComboBox4.getSelectedItem()).toString();
         //Strings for comparison "X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" 
         //Suggest Clearer variable naming scheme
         String e = "X";
@@ -886,6 +885,11 @@ public class calculatorFront extends javax.swing.JFrame {
        jTextField2.setText("");
        jTextField7.setText("");
        jTextField13.setText("");
+       //proper variable reset as well, cleans up everything
+       a = "";
+       b = "";
+       c = "";
+       d = "";
        jTextArea1.setText("You have cleared the first column");
     }//GEN-LAST:event_clear1ActionPerformed
 
