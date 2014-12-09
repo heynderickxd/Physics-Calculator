@@ -2,7 +2,7 @@ package primary.gui.main;
 /**
  * @author heynderickxd, cvann
  */
-import primary.methods.math.PrimaryMethods;
+import primary.methods.PrimaryMethods;
 public class calculatorFront extends javax.swing.JFrame {
 //Reference variables to assign within handling code as we get inputs- declared 
 //outside of main so that they may be accessed from any point in the handling code
@@ -143,16 +143,21 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        kComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" }));
+        kComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] {"X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf"}));
         kComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kComboBox2ActionPerformed(evt);
             }
         });
 
-        kComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" }));
+        kComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] {"X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf"}));
+        kComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kComboBox3ActionPerformed(evt);
+            }
+        });
 
-        kComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" }));
+        kComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] {"X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" }));
         kComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kComboBox4ActionPerformed(evt);
@@ -635,7 +640,7 @@ public class calculatorFront extends javax.swing.JFrame {
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createSequentialGroup()
-                                            .addGap(6, 6, 6)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -853,31 +858,235 @@ public class calculatorFront extends javax.swing.JFrame {
         b = (kComboBox2.getSelectedItem()).toString();
         c = (kComboBox3.getSelectedItem()).toString();
         d = (kComboBox4.getSelectedItem()).toString();
-        double box1 = Double.parseDouble(kBox1.getText());
-        double box2 = Double.parseDouble(kBox2.getText());
-        double box3 = Double.parseDouble(kBox3.getText());
+        double ba = Double.parseDouble(kBox1.getText());
+        double bb = Double.parseDouble(kBox2.getText());
+        double bc = Double.parseDouble(kBox3.getText());
+        
+
                 
         //Strings for comparison "X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" 
         //Suggest Clearer variable naming scheme
-        String e = "X";
-        String f = "a";
-        String g = "Vf";
-        String h = "Vo";
-        String i = "t";
-        String j = "α";
-        String k = "θ";
-        String l = "ωo";
-        String m = "ωf";
-        String n = ""; //does a blank combo box return an empty string? 
+        String[] variable = new String[6];
+        variable[0] = "X";
+        variable[1] = "a";
+        variable[2] = "Vf";
+        variable[3] = "Vo";
+        variable[4] = "t";
+        variable[5]  = ""; //does a blank combo box return an empty string? 
         //experimenting with how to evaulate the combo box values
-        System.out.println(d+".");
-        if(((a.equals(e) || b.equals(e) || c.equals(e)) && (a.equals(f) || b.equals(f) || c.equals(f)) && (a.equals(g) || b.equals(g) || c.equals(g)) &&  ( d.equals(h)))){
+        
+        if(a.equals("α"))
+        a="a";
+        
+        if(a.equals("θ"))
+        a="X";
+        
+        if(a.equals("ωo"))
+        a="Vo";
+        
+        if(a.equals("ωof"))
+        a="Vf";    
+        
+        if(b.equals("α"))
+        b="a";
+        
+        if(b.equals("θ"))
+        b="X";
+        
+        if(b.equals("ωo"))
+        b="Vo";
+        
+        if(b.equals("ωof"))
+        b="Vf";  
+        
+        if(c.equals("α"))
+        c="a";
+        
+        if(c.equals("θ"))
+        c="X";
+        
+        if(c.equals("ωo"))
+        c="Vo";
+        
+        if(c.equals("ωof"))
+        c="Vf";  
+        
+        if(d.equals("α"))
+        d="a";
+        
+        if(d.equals("θ"))
+        d="X";
+        
+        if(d.equals("ωo"))
+        d="Vo";
+        
+        if(d.equals("ωof"))
+        d="Vf";  
+         
+        double i= PrimaryMethods.idk(a, b, c, d, variable);
+        System.out.println(i);
+        switch ((int)(i)){
+            case 431:
+                PrimaryMethods.kinematics1(ba, bb, bc);
             
-            if(a.equals(e) && b.equals(f) && c.equals(g)){
-            }else if(a.equals(f) && b.equals(g) && c.equals(e)){
-            }else if(a.equals(g) && b.equals(e) && c.equals(f)){
-            }
-          
+            case 341:
+                PrimaryMethods.kinematics1(ba, bc, bb);
+            
+            case 4031:
+                PrimaryMethods.kinematics1(bb, ba, bc);
+            
+            case 4301:
+                PrimaryMethods.kinematics1(bc, ba, bb);
+            
+            case 3041:
+                PrimaryMethods.kinematics1(bb, bc, ba); 
+            
+            case 3401:
+                PrimaryMethods.kinematics1(bc, bb, ba); 
+            
+            case 1430: //143
+                PrimaryMethods.kinematics2(ba, bb, bc);
+            
+            case  1340:
+                PrimaryMethods.kinematics2(ba, bc, bb);
+            
+            case  4130:
+                PrimaryMethods.kinematics2(bb, ba, bc);
+            
+            case  4310 :
+                PrimaryMethods.kinematics2(bc, ba, bb);
+            
+            case 3140:
+                PrimaryMethods.kinematics2(bb, bc, ba); 
+            
+            case 3410:
+                PrimaryMethods.kinematics2(bc, bb, ba); 
+                
+            case 3412: //341
+                PrimaryMethods.kinematics3(ba, bb, bc);
+            
+            case 3142:
+                PrimaryMethods.kinematics3(ba, bc, bb);
+            
+            case 4312 :
+                PrimaryMethods.kinematics3(bb, ba, bc);
+            
+            case 4132:
+                PrimaryMethods.kinematics3(bc, ba, bb);
+            
+            case 1432:
+                PrimaryMethods.kinematics3(bb, bc, ba); 
+            
+            case 1342:
+                PrimaryMethods.kinematics3(bc, bb, ba);
+                
+            case 2413: //241
+                PrimaryMethods.kinematics4(ba, bb, bc);
+            
+            case 2143:
+                PrimaryMethods.kinematics4(ba, bc, bb);
+            
+            case 4213:
+                PrimaryMethods.kinematics4(bb, ba, bc);
+            
+            case 4123:
+                PrimaryMethods.kinematics4(bc, ba, bb);
+            
+            case 1243:
+                PrimaryMethods.kinematics4(bb, bc, ba); 
+            
+            case 1423:
+                PrimaryMethods.kinematics4(bc, bb, ba);
+                
+            case 3421: //243
+                PrimaryMethods.kinematics5(bc, bb, ba);
+            
+            case 3241:
+                PrimaryMethods.kinematics5(bb, bc, ba);
+            
+            case 4321:
+                PrimaryMethods.kinematics5(bc, ba, bb);
+            
+            case 4231:
+                PrimaryMethods.kinematics5(bb, ba, bc);
+            
+            case 2341:
+                PrimaryMethods.kinematics5(ba, bc, bb); 
+            
+            case 2431:
+                PrimaryMethods.kinematics5(ba, bb, bc);
+                
+            case 3124: //213
+                PrimaryMethods.kinematics6(bc, bb, ba);
+            
+            case 3214:
+                PrimaryMethods.kinematics6(bb, bc, ba);
+            
+            case 1324:
+                PrimaryMethods.kinematics6(bc, ba, bb);
+            
+            case 1234:
+                PrimaryMethods.kinematics6(bb, ba, bc);
+            
+            case 2314:
+                PrimaryMethods.kinematics6(ba, bc, bb); 
+            
+            case 2134:
+                PrimaryMethods.kinematics6(ba, bb, bc);
+                
+            case 1032: //013
+                PrimaryMethods.kinematics7(bb, ba, bc);
+            
+            case 1302:
+                PrimaryMethods.kinematics7(bc, ba, bb);
+            
+            case 3102:
+                PrimaryMethods.kinematics7(bc, bb, ba);
+            
+            case 3012:
+                PrimaryMethods.kinematics7(bb, bc, ba);
+            
+            case 0312:
+                PrimaryMethods.kinematics7(ba, bc, bb); 
+            
+            case 0132:
+                PrimaryMethods.kinematics7(ba, bb, bc);
+                
+            case 2103: //012
+                PrimaryMethods.kinematics8(bc, bb, ba);
+            
+            case 2013:
+                PrimaryMethods.kinematics8(bb, bc, ba);
+            
+            case 1203:
+                PrimaryMethods.kinematics8(bc, ba, bb);
+            
+            case 1023:
+                PrimaryMethods.kinematics8(bb, ba, bc);
+            
+            case 0213:
+                PrimaryMethods.kinematics8(ba, bc, bb); 
+            
+            case 0123:
+                PrimaryMethods.kinematics8(ba, bb, bc);
+            
+            case 3120: //312
+                PrimaryMethods.kinematics9(ba, bb, bc);
+            
+            case 3210:
+                PrimaryMethods.kinematics9(ba, bc, bb);
+            
+            case 2310:
+                PrimaryMethods.kinematics9(bb, bc, ba);
+            
+            case 2130:
+                PrimaryMethods.kinematics9(bc, bb, ba);
+            
+            case 1230:
+                PrimaryMethods.kinematics9(bc, ba, bb); 
+            
+            case 1320:
+                PrimaryMethods.kinematics9(bb, ba, bc);
         }
         
     }//GEN-LAST:event_solveKActionPerformed
@@ -1103,6 +1312,10 @@ public class calculatorFront extends javax.swing.JFrame {
     private void jComboBox30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox30ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox30ActionPerformed
+
+    private void kComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kComboBox3ActionPerformed
 
     /**
      * @param args the command line arguments

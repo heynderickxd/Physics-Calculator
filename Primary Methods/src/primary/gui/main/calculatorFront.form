@@ -229,7 +229,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel6" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <Component id="jComboBox14" min="-2" max="-2" attributes="0"/>
@@ -568,7 +568,7 @@
     <Component class="javax.swing.JComboBox" name="kComboBox2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;X&quot;, &quot;a&quot;, &quot;Vf&quot;, &quot;Vo&quot;, &quot;t&quot;, &quot;&#x3b1;&quot;, &quot;&#x3b8;&quot;, &quot;&#x3c9;o&quot;, &quot;&#x3c9;f&quot; })" type="code"/>
+          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] {&quot;X&quot;, &quot;a&quot;, &quot;Vf&quot;, &quot;Vo&quot;, &quot;t&quot;, &quot;&#x3b1;&quot;, &quot;&#x3b8;&quot;, &quot;&#x3c9;o&quot;, &quot;&#x3c9;f&quot;})" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -578,14 +578,17 @@
     <Component class="javax.swing.JComboBox" name="kComboBox3">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;X&quot;, &quot;a&quot;, &quot;Vf&quot;, &quot;Vo&quot;, &quot;t&quot;, &quot;&#x3b1;&quot;, &quot;&#x3b8;&quot;, &quot;&#x3c9;o&quot;, &quot;&#x3c9;f&quot; })" type="code"/>
+          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] {&quot;X&quot;, &quot;a&quot;, &quot;Vf&quot;, &quot;Vo&quot;, &quot;t&quot;, &quot;&#x3b1;&quot;, &quot;&#x3b8;&quot;, &quot;&#x3c9;o&quot;, &quot;&#x3c9;f&quot;})" type="code"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kComboBox3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="kComboBox4">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;X&quot;, &quot;a&quot;, &quot;Vf&quot;, &quot;Vo&quot;, &quot;t&quot;, &quot;&#x3b1;&quot;, &quot;&#x3b8;&quot;, &quot;&#x3c9;o&quot;, &quot;&#x3c9;f&quot; })" type="code"/>
+          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] {&quot;X&quot;, &quot;a&quot;, &quot;Vf&quot;, &quot;Vo&quot;, &quot;t&quot;, &quot;&#x3b1;&quot;, &quot;&#x3b8;&quot;, &quot;&#x3c9;o&quot;, &quot;&#x3c9;f&quot; })" type="code"/>
         </Property>
       </Properties>
       <Events>
