@@ -850,7 +850,6 @@ public class calculatorFront extends javax.swing.JFrame {
 
     private void kComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kComboBox4ActionPerformed
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_kComboBox4ActionPerformed
 
     private void solveKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solveKActionPerformed
@@ -860,20 +859,15 @@ public class calculatorFront extends javax.swing.JFrame {
         d = (kComboBox4.getSelectedItem()).toString();
         double ba = Double.parseDouble(kBox1.getText());
         double bb = Double.parseDouble(kBox2.getText());
-        double bc = Double.parseDouble(kBox3.getText());
-        
-
-                
+        double bc = Double.parseDouble(kBox3.getText());         
         //Strings for comparison "X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" 
-        //Suggest Clearer variable naming scheme
         String[] variable = new String[6];
         variable[0] = "X";
         variable[1] = "a";
         variable[2] = "Vf";
         variable[3] = "Vo";
         variable[4] = "t";
-        variable[5]  = ""; //does a blank combo box return an empty string? 
-        //experimenting with how to evaulate the combo box values
+        variable[5]  = "";  
         
         if(a.equals("α"))
         a="a";
@@ -1222,6 +1216,10 @@ public class calculatorFront extends javax.swing.JFrame {
         jLabel21.setText("");
         jLabel25.setText("");
         jLabel26.setText("");
+        a = "";
+        b = "";
+        c = "";
+        d = "";
         jTextArea1.setText("You have cleared all columns");
     }//GEN-LAST:event_clearAllActionPerformed
 
