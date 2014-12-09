@@ -2,6 +2,7 @@ package primary.gui.main;
 /**
  * @author heynderickxd, cvann
  */
+import primary.methods.math.PrimaryMethods;
 public class calculatorFront extends javax.swing.JFrame {
 //Reference variables to assign within handling code as we get inputs- declared 
 //outside of main so that they may be accessed from any point in the handling code
@@ -88,10 +89,10 @@ public class calculatorFront extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jComboBox11 = new javax.swing.JComboBox();
         jComboBox12 = new javax.swing.JComboBox();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        kBox1 = new javax.swing.JTextField();
+        kBox2 = new javax.swing.JTextField();
+        kBox3 = new javax.swing.JTextField();
+        kBoxOut = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
@@ -386,15 +387,15 @@ public class calculatorFront extends javax.swing.JFrame {
             }
         });
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        kBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                kBox1ActionPerformed(evt);
             }
         });
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        kBoxOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                kBoxOutActionPerformed(evt);
             }
         });
 
@@ -507,7 +508,7 @@ public class calculatorFront extends javax.swing.JFrame {
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                             .addComponent(kComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextField1))
+                                            .addComponent(kBox3))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel2)
                                             .addGroup(layout.createSequentialGroup()
@@ -517,10 +518,10 @@ public class calculatorFront extends javax.swing.JFrame {
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addGroup(layout.createSequentialGroup()
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(kBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                     .addGroup(layout.createSequentialGroup()
                                                         .addGap(6, 6, 6)
-                                                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                                        .addComponent(kBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel4)
@@ -537,7 +538,7 @@ public class calculatorFront extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(kComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(kBoxOut, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -599,7 +600,7 @@ public class calculatorFront extends javax.swing.JFrame {
                                         .addComponent(jLabel17)))
                                 .addComponent(clear3)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGap(1, 1, 1)
+                                    .addGap(0, 0, 0)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -716,13 +717,13 @@ public class calculatorFront extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(kComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(kBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(nComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(kComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(kBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(nComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -741,7 +742,7 @@ public class calculatorFront extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(kComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(kBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -755,7 +756,7 @@ public class calculatorFront extends javax.swing.JFrame {
                         .addComponent(jComboBox28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(kComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(kBoxOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -852,6 +853,10 @@ public class calculatorFront extends javax.swing.JFrame {
         b = (kComboBox2.getSelectedItem()).toString();
         c = (kComboBox3.getSelectedItem()).toString();
         d = (kComboBox4.getSelectedItem()).toString();
+        double box1 = Double.parseDouble(kBox1.getText());
+        double box2 = Double.parseDouble(kBox2.getText());
+        double box3 = Double.parseDouble(kBox3.getText());
+                
         //Strings for comparison "X", "a", "Vf", "Vo", "t", "α", "θ", "ωo", "ωf" 
         //Suggest Clearer variable naming scheme
         String e = "X";
@@ -865,13 +870,14 @@ public class calculatorFront extends javax.swing.JFrame {
         String m = "ωf";
         String n = ""; //does a blank combo box return an empty string? 
         //experimenting with how to evaulate the combo box values
-        if(
-          ((a.equals(e) || b.equals(a) || c.equals(a) || d.equals(a)) &&
-           (a.equals(f) || b.equals(f) || c.equals(f) || d.equals(f)) &&
-           (a.equals(g) || b.equals(g) || c.equals(g) || d.equals(g)) && 
-           (a.equals(h) || b.equals(h) || c.equals(h) || d.equals(h)))      
-                ){
-            //pull in requesite variables and solve for Vo with correct method 
+        System.out.println(d+".");
+        if(((a.equals(e) || b.equals(e) || c.equals(e)) && (a.equals(f) || b.equals(f) || c.equals(f)) && (a.equals(g) || b.equals(g) || c.equals(g)) &&  ( d.equals(h)))){
+            
+            if(a.equals(e) && b.equals(f) && c.equals(g)){
+            }else if(a.equals(f) && b.equals(g) && c.equals(e)){
+            }else if(a.equals(g) && b.equals(e) && c.equals(f)){
+            }
+          
         }
         
     }//GEN-LAST:event_solveKActionPerformed
@@ -881,10 +887,10 @@ public class calculatorFront extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void clear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear1ActionPerformed
-       jTextField1.setText("");
-       jTextField2.setText("");
-       jTextField7.setText("");
-       jTextField13.setText("");
+       kBox3.setText("");
+       kBoxOut.setText("");
+       kBox1.setText("");
+       kBox2.setText("");
        //proper variable reset as well, cleans up everything
        a = "";
        b = "";
@@ -993,10 +999,10 @@ public class calculatorFront extends javax.swing.JFrame {
         jTextField3.setText("");
         jTextField5.setText("");
         jTextField4.setText("");
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField7.setText("");
-        jTextField13.setText("");
+        kBox3.setText("");
+        kBoxOut.setText("");
+        kBox1.setText("");
+        kBox2.setText("");
         jLabel9.setText("");
         jLabel10.setText("");
         jLabel13.setText("");
@@ -1026,13 +1032,13 @@ public class calculatorFront extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox12ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void kBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_kBox1ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void kBoxOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kBoxOutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_kBoxOutActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -1194,11 +1200,8 @@ public class calculatorFront extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
@@ -1210,9 +1213,12 @@ public class calculatorFront extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextField kBox1;
+    private javax.swing.JTextField kBox2;
+    private javax.swing.JTextField kBox3;
+    private javax.swing.JTextField kBoxOut;
     private javax.swing.JComboBox kComboBox1;
     private javax.swing.JComboBox kComboBox2;
     private javax.swing.JComboBox kComboBox3;
