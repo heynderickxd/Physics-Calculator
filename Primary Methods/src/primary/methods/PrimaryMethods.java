@@ -37,7 +37,7 @@ public class PrimaryMethods {
         return r;
     }
     
-    public static double kinematics1 (double displacement, double time, double initialVelocity) { // 431 341 4031 4301 3401 3041
+    public static double kinematics1 (double displacement, double time, double initialVelocity) { // 0431 0341 4031 4301 3401 3041
     double acceleration = 0.0;
     acceleration = (displacement - (initialVelocity * time)) / Math.pow(time,2.0);
     return acceleration;
@@ -51,7 +51,7 @@ public class PrimaryMethods {
     return displacement;
     }
        //solving for v_o
-   public static double kinematics15 (double x, double a, double t){ //1403 1043 4013 4103 0143 0413
+   public static double kinematics14 (double x, double a, double t){ //1403 1043 4013 4103 0143 0413
        double vo = 0.0;
        vo = (x - (0.5 * a * t * t)) / t;
        return vo;
