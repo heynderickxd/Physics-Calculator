@@ -4,12 +4,31 @@ package primary.gui.main;
  */
 import primary.methods.PrimaryMethods;
 public class calculatorFront extends javax.swing.JFrame {
-//Reference variables to assign within handling code as we get inputs- declared 
-//outside of main so that they may be accessed from any point in the handling code
+//Reference variables to assign to different user inputs
     String a = "";
     String b = "";
     String c = "";
     String d = "";
+    String e = ""; //save slot one
+    String f = ""; //save slot two
+//Welcome screen string  -- MUST FINISH -- 
+    String welcome = "Welcome to the Physics Calculator "
+                 + "\n" + "Supported Equations Key"
+                 + "\n" + "Linear and Rotational Kinematics Equations"
+                 + "\n" + "K1: x = 0.5at^2 + Vot, θ = 0.5αt^2 + ωot "
+                 + "\n" + "K2: Vf = Vo + at, ωf = ωo + αt"
+                 + "\n" + "K3: Vf^2 = Vo^2 + 2ax, ωf^2 = ωo^2 + 2αθ"
+                 + "\n" + "K4: x = Vft - 0.5at^2, θ = ωft -0.5αt^2"
+                 + "\n" + "Moment of Inertia Equations"
+                 + "\n" + "MoI1: Point Mass"
+                 + "\n" + "MoI2: Hoop about central axis"
+                 + "\n" + "MoI8: Hoop about central diameter"
+                 + "\n" + "MoI3: Cylinder about central axis"
+                 + "\n" + "MoI4: Cylinder about central diameter"
+                 + "\n" + "MoI5: Rod about central axis"
+                 + "\n" + "MoI6: Solid Sphere about central axis"
+                 + "\n" + "MoI7: Shell Shpere about central axis"
+                 + "\n" + "Kinetic Energy Equations";
     /**
      * Creates new form calculatorFront
      */
@@ -124,7 +143,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Welcome to the Physics Calculator");
+        jTextArea1.setText(welcome);
         jScrollPane2.setViewportView(jTextArea1);
 
         clear1.setText("Clear");
@@ -196,7 +215,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jLabel24.setText("Slot 9");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "K1", "K2", "K3", "k4"}));
 
         jLabel27.setText("jLabel27");
 
@@ -214,7 +233,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jLabel30.setText("jLabel27");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MoI1", "MoI2", "MoI3", "MoI4", "MoI5", "MoI6", "MoI7" }));
 
         jLabel31.setText("jLabel27");
 
@@ -265,6 +284,11 @@ public class calculatorFront extends javax.swing.JFrame {
         jLabel44.setText("jLabel27");
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox6ActionPerformed(evt);
+            }
+        });
 
         jTextField31.setText("jTextField1");
 
@@ -482,10 +506,10 @@ public class calculatorFront extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel5))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -615,8 +639,8 @@ public class calculatorFront extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -629,12 +653,13 @@ public class calculatorFront extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void clear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear1ActionPerformed
-
-       //proper variable reset as well, cleans up everything
+//Kinematics
        a = "";
        b = "";
        c = "";
        d = "";
+       e = "";
+       f = "";
        jTextArea1.setText("You have cleared the first column");
     }//GEN-LAST:event_clear1ActionPerformed
 
@@ -643,37 +668,68 @@ public class calculatorFront extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void clear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear2ActionPerformed
-
-        jTextArea1.setText("You have cleared the second column");
+//Moment of Inertia 
+       a = "";
+       b = "";
+       c = "";
+       d = "";
+       e = "";
+       f = "";
+       jTextArea1.setText("You have cleared the second column");
     }//GEN-LAST:event_clear2ActionPerformed
 
     private void clear3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear3ActionPerformed
-
-        jTextArea1.setText("You have cleared the third column");
+//Kinetic Energy
+       a = "";
+       b = "";
+       c = "";
+       d = "";
+       e = "";
+       f = "";
+       jTextArea1.setText("You have cleared the third column");
     }//GEN-LAST:event_clear3ActionPerformed
 
     private void clear4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear4ActionPerformed
-
-        jTextArea1.setText("You have cleared the fourth column");
+//Conversions
+       a = "";
+       b = "";
+       c = "";
+       d = "";
+       e = "";
+       f = "";
+       jTextArea1.setText("You have cleared the fourth column");
     }//GEN-LAST:event_clear4ActionPerformed
 
     private void clear5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clear5ActionPerformed
-
-        jTextArea1.setText("You have cleared the fifth column");
+//Issac's 2nd Law
+       a = "";
+       b = "";
+       c = "";
+       d = "";
+       e = "";
+       f = "";
+       jTextArea1.setText("You have cleared the fifth column");
     }//GEN-LAST:event_clear5ActionPerformed
 
     private void clearSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearSaveActionPerformed
-
-        a = "";
-        b = "";
-        c = "";
-        d = "";
-        jTextArea1.setText("You have cleared all columns");
+       e = "";
+       f = "";
+       jTextArea1.setText("You have cleared all save slots");
     }//GEN-LAST:event_clearSaveActionPerformed
 
     private void clearAll1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAll1ActionPerformed
-        // TODO add your handling code here:
+       a = "";
+       b = "";
+       c = "";
+       d = "";
+       e = "";
+       f = "";
+       jTextArea1.setText("You have cleared all save slots and columns");
     }//GEN-LAST:event_clearAll1ActionPerformed
+
+    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox6ActionPerformed
 
     /**
      * @param args the command line arguments
