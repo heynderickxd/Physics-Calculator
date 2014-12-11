@@ -176,7 +176,7 @@ public class PrimaryMethods {
     * A set of methods to handle formulas involving Newton's Second Law
     * Can be used for both linear and angular applications, where
     * netForce = sumTorques
-    * mass = moment of intertia (I)
+    * mass = moment of inertia (I)
     * acceleration = alpha
     */
    //Solving for netForce
@@ -266,23 +266,20 @@ public class PrimaryMethods {
    double moI=mass/12*(a*a*b*b);
    return moI;
    }
-   //Method to find additional I through the parallel axis theorum
+   //Method to find additional I via parallel axis theorum
    public static double pAxis(double mass, double h){
    double mh2 = mass*h*h;
    return mh2;
    }
    public boolean inTest(String[] args) { 
-    
     Scanner sc = new Scanner(System.in);
     String s = sc.next();
-    try{
+    try {
     Double.parseDouble(s);
-    
-    }catch(NumberFormatException e){
+    } catch (NumberFormatException e) {
     return false;
     }
     return true;
     }
-    
   }
 
