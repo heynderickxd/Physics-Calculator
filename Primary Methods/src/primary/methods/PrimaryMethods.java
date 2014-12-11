@@ -1,7 +1,7 @@
 package primary.methods;
 /**
  * @author heynderickxd
- * @author vannc
+ * @author2 vannc
  */
 import java.util.Scanner;
 public class PrimaryMethods {
@@ -37,6 +37,12 @@ public class PrimaryMethods {
         vF = kinematics7(x, a, Vo);
         t = kinematics6(vF, a, Vo);
         return t;
+    }
+    //solving for vO
+    public static double kinematics16(double x, double a, double t){
+        double vO;
+        vO = (x - (a * t * t / 2)) / t;
+        return vO;
     }
    //methods for second kinematic equation (v_f=v_o + at
    //solving for final velocity  
@@ -246,26 +252,26 @@ public class PrimaryMethods {
    return moI;
    }
    //Hollow Sphere around central axis
-   public double moISh(double mass, double radius){
+   public static double moISh(double mass, double radius){
    double moI=2/3*mass*radius*radius;
    return moI;
    }
    //Hoop around diameter
-   public double moIHd(double mass, double radius){
+   public static double moIHd(double mass, double radius){
    double moI=.5*mass*radius*radius;
    return moI;
    }
    //Slab around central axis
-   public double moISl(double mass, double a, double b){
+   public static double moISl(double mass, double a, double b){
    double moI=mass/12*(a*a*b*b);
    return moI;
    }
    //Method to find additional I through the parallel axis theorum
-   public double pAxis(double mass, double h){
+   public static double pAxis(double mass, double h){
    double mh2 = mass*h*h;
    return mh2;
    }
-    public boolean inTest(String[] args) { 
+   public boolean inTest(String[] args) { 
     
     Scanner sc = new Scanner(System.in);
     String s = sc.next();
