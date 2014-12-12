@@ -211,7 +211,7 @@ public class PrimaryMethods {
        v = Math.sqrt(2*energy/mass);
        return v;
    }
-   //Mehtods to solve equations of I
+   //Methods to solve equations of I
    //point mass
    public static double MoI(double in[][], int numMasses){
        double moI;
