@@ -32,13 +32,15 @@ public class calculatorFront extends javax.swing.JFrame {
                  + "\n" + "MoI6: Solid Sphere about central axis"
                  + "\n" + "MoI7: Shell Shpere about central axis"
                  + "\n" + "Kinetic Energy Equations"
-                 + "\n" + "Ke1: ke = 0.5mV^2, ke = 0.5Iω^2"
+                 + "\n" + "Ke1: ke = 0.5mV^2"
+                 + "\n" + "Ke2: ke = 0.5Iω^2"
                  + "\n" + "Conversions Equations"
                  + "\n" + "C1: x = rθ (where r is radius)"
                  + "\n" + "C2: v = rω"
                  + "\n" + "C3: a = rα"
                  + "\n" + "Newton's Second Law Equations"
-                 + "\n" + "NSL1: ΣF = ma, Στ = Iω";
+                 + "\n" + "NSL1: ΣF = ma"
+                 + "\n" + "NSL2: Στ = Iω";
     /**
      * Creates new form calculatorFront
      */
@@ -275,13 +277,13 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jLabel38.setText("jLabel27");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "C1", "C2", "C3" }));
 
         jTF18.setText("jTextField1");
 
         jTF20.setText("jTextField1");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ke1", "Ke2" }));
 
         jLabel39.setText("jLabel27");
 
@@ -299,7 +301,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jLabel44.setText("jLabel27");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "NSL1", "NSL2" }));
         jComboBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox6ActionPerformed(evt);
