@@ -646,6 +646,9 @@
           <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;K1&quot;, &quot;K2&quot;, &quot;K3&quot;, &quot;K4&quot;, &quot;K1a&quot;, &quot;K2a&quot;, &quot;K3a&quot;, &quot;k4a&quot;})" type="code"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel27">
       <Properties>
@@ -859,6 +862,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Solve"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>

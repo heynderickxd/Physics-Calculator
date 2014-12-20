@@ -12,6 +12,13 @@ public class calculatorFront extends javax.swing.JFrame {
    private String d = "";
    private String e = ""; //save slot one
    private String f = ""; //save slot two
+//Reference doubles to convert from strings
+   private double d1 = 0.0;
+   private double d2 = 0.0;
+   private double d3 = 0.0;
+   private double d4 = 0.0;
+   private double d5 = 0.0;
+   private double d6 = 0.0;
 //Welcome screen string 
    private final String WELCOME = "Welcome to the Physics Calculator";
 //Equations key string -- IMPORTANT USER INFORMATION -- 
@@ -238,6 +245,11 @@ public class calculatorFront extends javax.swing.JFrame {
         jLabel24.setText("Slot 9");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "K1", "K2", "K3", "K4", "K1a", "K2a", "K3a", "k4a"}));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel27.setText("  a =");
 
@@ -353,6 +365,11 @@ public class calculatorFront extends javax.swing.JFrame {
         });
 
         jButton2.setText("Solve");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Solve");
 
@@ -886,6 +903,27 @@ public class calculatorFront extends javax.swing.JFrame {
     private void jTF20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF20ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTF20ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // Solve for Kinematics problems
+        //pull in inputed values from combo boxes
+        a = jTF1.getText();
+        b = jTF2.getText();
+        c = jTF3.getText();
+        d = jTF4.getText();
+        d1 = Double.parseDouble(a);
+        d2 = Double.parseDouble(b);
+        d3 = Double.parseDouble(c);
+        d4 = Double.parseDouble(d);
+        // now must test for the empty box- or have the user enter some blank value 
+        //to aviod handling the null pointer error in runtime?
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // Use this section to change the values of the lables based on the combo box selection
+        jLabel27.setText(e);
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
