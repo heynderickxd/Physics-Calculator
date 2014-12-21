@@ -213,12 +213,19 @@ public class PrimaryMethods {
    }
    //Methods to solve equations of I
    //point mass
+   /**
    public static double MoI(double in[][], int numMasses){
        double moI;
        moI = 0.0;
        for(int i = 0; i<in.length; i++){
        moI=moI+(in[i][0]*in[i][1]);
        }
+       return moI;
+   }
+   **/
+   public static double MoI(double m, double r){
+       double moI;
+       moI = (m * r * r);
        return moI;
    }
    //Hoop around central axis

@@ -24,6 +24,7 @@ public class calculatorFront extends javax.swing.JFrame {
 //Equations key string -- IMPORTANT USER INFORMATION -- 
    private final String KEY = "Supported Equations"
                  + "\n" + "Note that all linear values correspond to respective rotational values."
+                 + "\n" 
                  + "\n" + "Linear and Rotational Kinematics Equations"
                  + "\n" + "K1:  x = 0.5at^2 + Vot"
                  + "\n" + "K2:  Vf = Vo + at"
@@ -33,22 +34,26 @@ public class calculatorFront extends javax.swing.JFrame {
                  + "\n" + "K2a: ωf = ωo + αt"
                  + "\n" + "K3a: ωf^2 = ωo^2 + 2αθ"
                  + "\n" + "K4a: θ = ωft -0.5αt^2"
+                 + "\n"
                  + "\n" + "Moment of Inertia Equations"
                  + "\n" + "MoI1: Point Mass"
                  + "\n" + "MoI2: Hoop about central axis"
-                 + "\n" + "MoI8: Hoop about central diameter"
-                 + "\n" + "MoI3: Cylinder about central axis"
-                 + "\n" + "MoI4: Cylinder about central diameter"
-                 + "\n" + "MoI5: Rod about central axis"
-                 + "\n" + "MoI6: Solid Sphere about central axis"
-                 + "\n" + "MoI7: Shell Shpere about central axis"
+                 + "\n" + "MoI3: Hoop about central diameter"
+                 + "\n" + "MoI4: Cylinder about central axis"
+                 + "\n" + "MoI5: Cylinder about central diameter"
+                 + "\n" + "MoI6: Rod about central axis"
+                 + "\n" + "MoI7: Solid Sphere about central axis"
+                 + "\n" + "MoI8: Shell Shpere about central axis"
+                 + "\n"
                  + "\n" + "Kinetic Energy Equations"
                  + "\n" + "Ke1: ke = 0.5mV^2"
                  + "\n" + "Ke2: ke = 0.5Iω^2"
+                 + "\n"
                  + "\n" + "Conversions Equations"
                  + "\n" + "C1: x = rθ (where r is radius)"
                  + "\n" + "C2: v = rω"
                  + "\n" + "C3: a = rα"
+                 + "\n"
                  + "\n" + "Newton's Second Law Equations"
                  + "\n" + "NSL1: ΣF = ma"
                  + "\n" + "NSL2: Στ = Iω";
@@ -168,7 +173,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jLabel5.setText("Kinetic Energy");
 
-        jLabel6.setText("Moment of Inertial");
+        jLabel6.setText("Moment of Inertia");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -372,6 +377,11 @@ public class calculatorFront extends javax.swing.JFrame {
         });
 
         jButton3.setText("Solve");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Solve");
 
@@ -922,8 +932,58 @@ public class calculatorFront extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // Use this section to change the values of the lables based on the combo box selection
-        jLabel27.setText(e);
+        String k1 = "K1";
+        String k2 = "K2";
+        String k3 = "K3";
+        String k4 = "K4";
+        String k1a = "K1a";
+        String k2a = "K2a";
+        String k3a = "K3a";
+        String k4a = "K4a";
+        
+        String selection = (String) jComboBox1.getSelectedItem();
+        if(selection.equals(k1) || selection.equals(k2) 
+        || selection.equals(k3) || selection.equals(k4)){
+            jLabel27.setText("a =");
+            jLabel28.setText("t =");
+            jLabel30.setText("Vo =");
+            jLabel29.setText("x =");
+        } else {
+            jLabel27.setText("α =");
+            jLabel28.setText("t =");
+            jLabel30.setText("ωo =");
+            jLabel29.setText("θ =");
+            
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // Solving for moment of inertia
+        String selection = (String) jComboBox2.getSelectedItem();
+        
+        a = jTF7.getText();
+        b = jTF8.getText();
+        c = jTF9.getText();
+        d = jTF10.getText();
+        //make use of inTest from pmeth to check inputs before assigning
+        d1 = Double.parseDouble(a);
+        d2 = Double.parseDouble(b);
+        d3 = Double.parseDouble(c);
+        d4 = Double.parseDouble(d);
+        
+        String ans;
+        
+        if(selection.equals("MoI1")){
+            ans = Double.toString(PrimaryMethods.MoI(d1, d2));
+            jTextArea1.setText("Your answer is " + ans);
+        } else if(selection.equals("MoI2")){
+            ans = Double.toString(PrimaryMethods.moIHc(d1, d2));
+            jTextArea1.setText("Your answer is " + ans);
+        } else if (selection.equals("MoI3")){
+            ans = Double.toString(PrimaryMethods.moIHd(d1, d2));
+            jTextArea1.setText("Your answer is " + ans);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
