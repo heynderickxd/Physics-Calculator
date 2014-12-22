@@ -250,17 +250,17 @@ public class PrimaryMethods {
    }
    //Rod around central axis
    public static double moIR(double mass, double length){
-   double moI=1/12*mass*length*length;
+   double moI=(1/12)*mass*length*length;
    return moI;
    }
    //Solid Sphere around central axis
    public static double moIS(double mass, double radius){
-   double moI=2/5*mass*radius*radius;
+   double moI=(2/5)*mass*radius*radius;
    return moI;
    }
    //Hollow Sphere around central axis
    public static double moISh(double mass, double radius){
-   double moI=2/3*mass*radius*radius;
+   double moI=(2/3)*mass*radius*radius;
    return moI;
    }
    //Hoop around diameter
@@ -270,7 +270,7 @@ public class PrimaryMethods {
    }
    //Slab around central axis
    public static double moISl(double mass, double a, double b){
-   double moI=mass/12*(a*a*b*b);
+   double moI=(mass/12)*(a*a*b*b);
    return moI;
    }
    //Method to find additional I via parallel axis theorum
@@ -278,7 +278,8 @@ public class PrimaryMethods {
    double mh2 = mass*h*h;
    return mh2;
    }
-   public boolean inTest(String[] args) { 
+   /*
+   public static boolean inTest(String[] args) { 
     Scanner sc = new Scanner(System.in);
     String s = sc.next();
     try {
@@ -288,5 +289,14 @@ public class PrimaryMethods {
     }
     return true;
     }
+   */
+   public static boolean inTest(String in){
+       try {
+         Double.parseDouble(in);
+       } catch (NumberFormatException e) {
+           return false;
+       }
+       return true;
+   }
   }
 

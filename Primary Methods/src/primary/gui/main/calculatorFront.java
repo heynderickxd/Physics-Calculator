@@ -20,7 +20,9 @@ public class calculatorFront extends javax.swing.JFrame {
    private double d5 = 0.0;
    private double d6 = 0.0;
 //Welcome screen string 
-   private final String WELCOME = "Welcome to the Physics Calculator";
+   private final String WELCOME = "Welcome to the Physics Calculator"
+                                  + "\n" + "Refer to the key for equations information."
+                                  + "\n" + "Leave unneceassary slots blank.";
 //Equations key string -- IMPORTANT USER INFORMATION -- 
    private final String KEY = "Supported Equations"
                  + "\n" + "Note that all linear values correspond to respective rotational values."
@@ -57,7 +59,10 @@ public class calculatorFront extends javax.swing.JFrame {
                  + "\n" + "Newton's Second Law Equations"
                  + "\n" + "NSL1: ΣF = ma"
                  + "\n" + "NSL2: Στ = Iω";
-    /**
+   //Error Screen String
+   private final String ERR = "You have entered values that are inncorrect or in improper format."
+                                + "\n" + "Please make sure you have entered a decimal.";
+   /**
      * Creates new form calculatorFront
      */
     public calculatorFront() {
@@ -156,6 +161,7 @@ public class calculatorFront extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel46 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
 
         jScrollPane1.setViewportView(jTextPane1);
 
@@ -276,7 +282,7 @@ public class calculatorFront extends javax.swing.JFrame {
 
         jLabel30.setText("  Vo =");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MoI1", "MoI2", "MoI3", "MoI4", "MoI5", "MoI6", "MoI7" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MoI1", "MoI2", "MoI3", "MoI4", "MoI5", "MoI6", "MoI7", "MoI8" }));
 
         jLabel31.setText("  m =");
 
@@ -395,6 +401,13 @@ public class calculatorFront extends javax.swing.JFrame {
         jButton6.setText("Solve");
 
         jLabel46.setText("  F =     ");
+
+        jButton7.setText("Home");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -562,7 +575,9 @@ public class calculatorFront extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
-                                .addComponent(jButton1)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton7)
+                                    .addComponent(jButton1))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2))))
         );
@@ -574,8 +589,10 @@ public class calculatorFront extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)
+                        .addComponent(jButton7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(37, 37, 37)
                         .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -936,11 +953,7 @@ public class calculatorFront extends javax.swing.JFrame {
         String k2 = "K2";
         String k3 = "K3";
         String k4 = "K4";
-        String k1a = "K1a";
-        String k2a = "K2a";
-        String k3a = "K3a";
-        String k4a = "K4a";
-        
+
         String selection = (String) jComboBox1.getSelectedItem();
         if(selection.equals(k1) || selection.equals(k2) 
         || selection.equals(k3) || selection.equals(k4)){
@@ -965,25 +978,61 @@ public class calculatorFront extends javax.swing.JFrame {
         b = jTF8.getText();
         c = jTF9.getText();
         d = jTF10.getText();
-        //make use of inTest from pmeth to check inputs before assigning
+        //make use of inTest from pmeth to check inputs before parsing
+        if(PrimaryMethods.inTest(a) && PrimaryMethods.inTest(b) 
+           && PrimaryMethods.inTest(c) && PrimaryMethods.inTest(d)){
         d1 = Double.parseDouble(a);
         d2 = Double.parseDouble(b);
         d3 = Double.parseDouble(c);
         d4 = Double.parseDouble(d);
+        } else if (PrimaryMethods.inTest(a) && PrimaryMethods.inTest(b) 
+           && !PrimaryMethods.inTest(c) && !PrimaryMethods.inTest(d)){
+        d1 = Double.parseDouble(a);
+        d2 = Double.parseDouble(b);
+        } else {
+            jTextArea1.setText(ERR);
+        }
         
         String ans;
         
         if(selection.equals("MoI1")){
             ans = Double.toString(PrimaryMethods.MoI(d1, d2));
             jTextArea1.setText("Your answer is " + ans);
+            jTF12.setText(ans);
         } else if(selection.equals("MoI2")){
             ans = Double.toString(PrimaryMethods.moIHc(d1, d2));
             jTextArea1.setText("Your answer is " + ans);
+            jTF12.setText(ans);
         } else if (selection.equals("MoI3")){
             ans = Double.toString(PrimaryMethods.moIHd(d1, d2));
             jTextArea1.setText("Your answer is " + ans);
+            jTF12.setText(ans);
+        } else if (selection.equals("MoI4")){
+            ans = Double.toString(PrimaryMethods.moICc(d1, d2));
+            jTextArea1.setText("Your answer is " + ans);
+            jTF12.setText(ans);
+        } else if (selection.equals("MoI5")){
+            ans = Double.toString(PrimaryMethods.moICd(d1, d2, d4));
+            jTextArea1.setText("Your answer is " + ans);
+            jTF12.setText(ans);
+        } else if (selection.equals("MoI6")){
+            ans = Double.toString(PrimaryMethods.moIR(d1, d2));
+            jTextArea1.setText("Your answer is " + ans);
+            jTF12.setText(ans);
+        } else if (selection.equals("MoI7")){
+            ans = Double.toString(PrimaryMethods.moIS(d1, d2));
+            jTextArea1.setText("Your answer is " + ans);
+            jTF12.setText(ans);
+        } else {
+            ans = Double.toString(PrimaryMethods.moISh(d1, d2));
+            jTextArea1.setText("Your answer is " + ans);
+            jTF12.setText(ans);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        jTextArea1.setText(WELCOME);
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1035,6 +1084,7 @@ public class calculatorFront extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
